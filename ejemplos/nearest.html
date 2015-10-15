@@ -33,14 +33,11 @@
                         var datos = {};
                         if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                             datos = JSON.parse(xmlHttp.responseText);
-                            // console.info(datos);
-
                             // Estaciones Info
                             var puntos = [];
                             var infoPuntos = [];
 
                             datos = datos.locations;
-
                             // Posición usuario
                             puntos.push(["usuario", position.coords.longitude, position.coords.latitude, 0]);
                             infoPuntos.push(['<div class="info_content">' +
@@ -69,8 +66,6 @@
                                     '</div>'
                                 ]);
                             }
-                            console.log(puntos);
-                            console.log(infoPuntos);
                             // Estaciones Info (Fin)
                             // GMaps
                             var map = new google.maps.Map(document.getElementById('mapa'), {
@@ -109,7 +104,7 @@
                             // GMaps (Fin)
                         } else if (xmlHttp.readyState === 4 && xmlHttp.status === 404) {
                             datos = JSON.parse(xmlHttp.responseText);
-                            console.error("ERROR API! 404 ");
+                            document.getElementById('mapa').innerHTML('<h1>Error 404 al conectar con la API.</h1>');
                         }
                     };
                     xmlHttp.open("GET", cURL + cParams + cParamsMore, true);
