@@ -25,9 +25,9 @@ Los iconos utilizados en la aplicación son de Freepick.
 
 **Capturas**
 
-![usuario detalles](/img/gmaps_bicimad_geolocation.png)
+![usuario detalles](img/gmaps_bicimad_geolocation.png)
 
-![estación detalles](/img/gmaps_bicimad_station.png)
+![estación detalles](img/gmaps_bicimad_station.png)
 
 
 ### Detalles de las estaciones
@@ -41,4 +41,4 @@ En [este ejemplo](locations.html) la idea principal es poder usar [dataTables](h
 
 **Capturas**
 
-![dataTables detalles](/img/dataTable_locations.png)
+![dataTables detalles](img/dataTable_locations.png)
